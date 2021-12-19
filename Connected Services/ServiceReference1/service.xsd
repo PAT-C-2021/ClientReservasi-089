@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ServiceReservasi" />
+  <xs:element name="pemesanan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDPemesanan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NamaCustomer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NoTelepon" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="JumlahPemesanan" type="xs:int" />
+        <xs:element minOccurs="0" name="IDLokasi" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pemesananResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pemesananResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="editPemesanan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDPemesanan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NamaCustomer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="No_telepon" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="editPemesananResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="editPemesananResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deletePemesanan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDPemesanan" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deletePemesananResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="deletePemesananResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReviewLokasi">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReviewLokasiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ServiceReservasi" minOccurs="0" name="ReviewLokasiResult" nillable="true" type="q1:ArrayOfCekLokasi" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DetailLokasi">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DetailLokasiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ServiceReservasi" minOccurs="0" name="DetailLokasiResult" nillable="true" type="q2:ArrayOfDetailLokasi" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Pemesanan">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PemesananResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ServiceReservasi" minOccurs="0" name="PemesananResult" nillable="true" type="q3:ArrayOfPemesanan" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

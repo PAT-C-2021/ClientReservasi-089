@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ServiceReservasi" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ServiceReservasi" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfCekLokasi">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CekLokasi" nillable="true" type="tns:CekLokasi" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCekLokasi" nillable="true" type="tns:ArrayOfCekLokasi" />
+  <xs:complexType name="CekLokasi">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeskripsiSingkat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDLokasi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NamaLokasi" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CekLokasi" nillable="true" type="tns:CekLokasi" />
+  <xs:complexType name="ArrayOfDetailLokasi">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DetailLokasi" nillable="true" type="tns:DetailLokasi" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDetailLokasi" nillable="true" type="tns:ArrayOfDetailLokasi" />
+  <xs:complexType name="DetailLokasi">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeskripsiFull" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDLokasi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Kuota" type="xs:int" />
+      <xs:element minOccurs="0" name="NamaLokasi" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DetailLokasi" nillable="true" type="tns:DetailLokasi" />
+  <xs:complexType name="ArrayOfPemesanan">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Pemesanan" nillable="true" type="tns:Pemesanan" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPemesanan" nillable="true" type="tns:ArrayOfPemesanan" />
+  <xs:complexType name="Pemesanan">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IDPemesanan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JumlahPemesanan" type="xs:int" />
+      <xs:element minOccurs="0" name="Lokasi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NamaCustomer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NoTelepon" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Pemesanan" nillable="true" type="tns:Pemesanan" />
+</xs:schema>
