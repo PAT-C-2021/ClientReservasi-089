@@ -45,4 +45,19 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Pemesanan" nillable="true" type="tns:Pemesanan" />
+  <xs:complexType name="ArrayOfDataRegister">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataRegister" nillable="true" type="tns:DataRegister" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataRegister" nillable="true" type="tns:ArrayOfDataRegister" />
+  <xs:complexType name="DataRegister">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="kategori" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataRegister" nillable="true" type="tns:DataRegister" />
 </xs:schema>

@@ -199,6 +199,7 @@ namespace ClientReservasi_20190140089
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dtPemesanan)).EndInit();
             this.ResumeLayout(false);

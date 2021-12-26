@@ -51,6 +51,36 @@ namespace ClientReservasi_20190140089.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Pemesanan", ReplyAction="http://tempuri.org/IService1/PemesananResponse")]
         System.Threading.Tasks.Task<ClientReservasi_20190140089.ServiceReference1.PemesananResponse> Pemesanan1Async(ClientReservasi_20190140089.ServiceReference1.PemesananRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Login", ReplyAction="http://tempuri.org/IService1/LoginResponse")]
+        string Login(string username, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Login", ReplyAction="http://tempuri.org/IService1/LoginResponse")]
+        System.Threading.Tasks.Task<string> LoginAsync(string username, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Register", ReplyAction="http://tempuri.org/IService1/RegisterResponse")]
+        string Register(string username, string password, string kategori);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Register", ReplyAction="http://tempuri.org/IService1/RegisterResponse")]
+        System.Threading.Tasks.Task<string> RegisterAsync(string username, string password, string kategori);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateRegister", ReplyAction="http://tempuri.org/IService1/UpdateRegisterResponse")]
+        string UpdateRegister(string username, string password, string kategori, int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateRegister", ReplyAction="http://tempuri.org/IService1/UpdateRegisterResponse")]
+        System.Threading.Tasks.Task<string> UpdateRegisterAsync(string username, string password, string kategori, int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteRegister", ReplyAction="http://tempuri.org/IService1/DeleteRegisterResponse")]
+        string DeleteRegister(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteRegister", ReplyAction="http://tempuri.org/IService1/DeleteRegisterResponse")]
+        System.Threading.Tasks.Task<string> DeleteRegisterAsync(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DataRegist", ReplyAction="http://tempuri.org/IService1/DataRegistResponse")]
+        ServiceReservasi.DataRegister[] DataRegist();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DataRegist", ReplyAction="http://tempuri.org/IService1/DataRegistResponse")]
+        System.Threading.Tasks.Task<ServiceReservasi.DataRegister[]> DataRegistAsync();
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -166,6 +196,46 @@ namespace ClientReservasi_20190140089.ServiceReference1 {
         public System.Threading.Tasks.Task<ClientReservasi_20190140089.ServiceReference1.PemesananResponse> Pemesanan1Async() {
             ClientReservasi_20190140089.ServiceReference1.PemesananRequest inValue = new ClientReservasi_20190140089.ServiceReference1.PemesananRequest();
             return ((ClientReservasi_20190140089.ServiceReference1.IService1)(this)).Pemesanan1Async(inValue);
+        }
+        
+        public string Login(string username, string password) {
+            return base.Channel.Login(username, password);
+        }
+        
+        public System.Threading.Tasks.Task<string> LoginAsync(string username, string password) {
+            return base.Channel.LoginAsync(username, password);
+        }
+        
+        public string Register(string username, string password, string kategori) {
+            return base.Channel.Register(username, password, kategori);
+        }
+        
+        public System.Threading.Tasks.Task<string> RegisterAsync(string username, string password, string kategori) {
+            return base.Channel.RegisterAsync(username, password, kategori);
+        }
+        
+        public string UpdateRegister(string username, string password, string kategori, int id) {
+            return base.Channel.UpdateRegister(username, password, kategori, id);
+        }
+        
+        public System.Threading.Tasks.Task<string> UpdateRegisterAsync(string username, string password, string kategori, int id) {
+            return base.Channel.UpdateRegisterAsync(username, password, kategori, id);
+        }
+        
+        public string DeleteRegister(string username) {
+            return base.Channel.DeleteRegister(username);
+        }
+        
+        public System.Threading.Tasks.Task<string> DeleteRegisterAsync(string username) {
+            return base.Channel.DeleteRegisterAsync(username);
+        }
+        
+        public ServiceReservasi.DataRegister[] DataRegist() {
+            return base.Channel.DataRegist();
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReservasi.DataRegister[]> DataRegistAsync() {
+            return base.Channel.DataRegistAsync();
         }
     }
 }
